@@ -65,6 +65,20 @@ public class UserRegistration {
         else
             System.out.println("Phone Number is Invalid");
     }
+
+    public static void validPasswordRules() {
+        System.out.print("Enter The Password At-least Eight Character : ");
+        String passWord = scanner.nextLine();
+        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@])(?=\\S+$).{8,20}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(passWord);
+        boolean r = m.matches();
+        if (r)
+            System.out.println("Password is Valid");
+        else
+            System.out.println("Password is Invalid");
+
+    }
 }
 
 
