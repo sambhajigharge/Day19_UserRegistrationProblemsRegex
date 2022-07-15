@@ -12,9 +12,13 @@ public class UserRegistrationMain {
     public static void main(String[] args) {
         welcome();
         System.out.println("Enter 1 : to validate First Name ");
+        System.out.println("Enter 2 : to validate last Name ");
         switch (scanner.nextInt()) {
             case 1:
                 UserRegistration.validFirstName();
+                break;
+            case 2:
+                UserRegistration.validLastName();
                 break;
         }
     }
