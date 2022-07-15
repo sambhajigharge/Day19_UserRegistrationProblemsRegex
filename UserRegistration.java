@@ -51,6 +51,21 @@ public class UserRegistration {
             System.out.println("Email Address is Invalid");
 
     }
+
+    public static void validPhoneNumber() {
+        System.out.print("Enter your Mobile Number : ");
+        String phoneNo = scanner.nextLine();
+        String regex = "^[6-9]{1}[0-9]{9}$";
+        //"^\\d{10}$" regex for ten digits
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(phoneNo);
+        boolean r = m.matches();
+        if (r)
+            System.out.println("Phone Number is Valid");
+        else
+            System.out.println("Phone Number is Invalid");
+    }
 }
+
 
 
