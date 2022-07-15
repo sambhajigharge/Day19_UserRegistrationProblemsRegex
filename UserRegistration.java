@@ -34,5 +34,23 @@ public class UserRegistration {
         if (r) System.out.println("Last name is valid");
         else System.out.println("Last name is !Invalid");
     }
+
+    public static void validEmailID() {
+        System.out.println("Enter E-mail:");
+        String email = scanner.next();
+
+        String regex = "^[A-Za-z0-9+.-]+@(.+)$";
+
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(email);
+        boolean r = m.matches();
+
+        if (r)
+            System.out.println("Valid Email Address");
+        else
+            System.out.println("Email Address is Invalid");
+
+    }
 }
+
 
